@@ -3,25 +3,23 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-                    ZStack {
-                        Color(.systemBlue).opacity(0.15)
-                            .edgesIgnoringSafeArea(.top)
-                        Text("APP name & Logo")
-                            .font(.title.bold())
-                            .foregroundColor(Color(.systemBlue))
-                            .padding(.top, 16)
-                    }
-                    .frame(height: 80)
-            
-            
-            
+            ZStack {
+                Color(.systemBlue).opacity(0.15)
+                    .edgesIgnoringSafeArea(.top)
+                Text("APP name & Logo")
+                    .font(.title.bold())
+                    .foregroundColor(Color(.systemBlue))
+                    .padding(.top, 16)
+            }
+            .frame(height: 80)
+
             // Search bar with magnifying glass icon
             HStack {
                 TextField("Search...", text: .constant(""))
                     .padding(8)
                     .background(Color(.systemGray5))
                     .cornerRadius(8)
-                
+
                 Button(action: {
                     // Action for magnifying glass icon
                 }) {
@@ -33,9 +31,7 @@ struct ContentView: View {
             }
             .padding(.horizontal, 16)
             .padding(.top, 10)
-            
-            
-            
+
             // Large central area for the app logo
             RoundedRectangle(cornerRadius: 8)
                 .stroke(Color(.systemBlue).opacity(0.5), lineWidth: 2)
@@ -48,9 +44,9 @@ struct ContentView: View {
                 )
                 .padding(.horizontal, 16)
                 .padding(.top, 30)
-            
+
             Spacer()
-            
+
             // Tab bar area with icons
             HStack {
                 Spacer()
@@ -66,9 +62,9 @@ struct ContentView: View {
                             .foregroundColor(Color(.systemBlue))
                     }
                 }
-                
+
                 Spacer()
-                
+
                 NavigationLink(destination: NearbyStoresView()) {
                     VStack {
                         Image(systemName: "mappin.and.ellipse")
@@ -79,9 +75,9 @@ struct ContentView: View {
                             .foregroundColor(Color(.systemBlue))
                     }
                 }
-                
+
                 Spacer()
-                
+
                 NavigationLink(destination: HighestRewardView()) {
                     VStack {
                         Image(systemName: "location")
@@ -92,9 +88,9 @@ struct ContentView: View {
                             .foregroundColor(Color(.systemBlue))
                     }
                 }
-                
+
                 Spacer()
-                
+
                 NavigationLink(destination: BestCombinationView()) {
                     VStack {
                         Image(systemName: "star")
@@ -105,9 +101,9 @@ struct ContentView: View {
                             .foregroundColor(Color(.systemBlue))
                     }
                 }
-                
+
                 Spacer()
-                
+
                 NavigationLink(destination: AddCardView()) {
                     VStack {
                         Image(systemName: "plus.circle")
@@ -118,7 +114,7 @@ struct ContentView: View {
                             .foregroundColor(Color(.systemBlue))
                     }
                 }
-                
+
                 Spacer()
             }
             .padding(.bottom, 16)
